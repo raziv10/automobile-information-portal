@@ -1,0 +1,95 @@
+<head>
+  <meta charset="utf-8" />
+  <link href="../../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body class="body">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav" >
+  <div class="container">
+    <a class="navbar-brand">Recently Posted</a>
+    <a  class="btn btn-info btn-lg" id="logout-btn" (click)="logout()">
+      <i class="fa fa-sign-out"></i>
+      Log out
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<h1 class="my-4" style="margin-left: 320px">
+  <a style="color:royalblue" class="hvr-grow"   (click)="add()">POST</a>
+  <!--        <button mat-button color="primary"  (click)="add()">POST</button>-->
+</h1>
+<div class="container" id="content" style="margin-left:315px;width: 1004px">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+      <ng-container *ngIf="loader === true">
+        <div class="sk-chase">
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+          <div class="sk-chase-dot"></div>
+        </div>
+      </ng-container>
+
+
+      <ng-container *ngIf="noData === true">
+        <h2 class="my-4" style="text-align: center;color: slategray;">No posts available</h2>
+      </ng-container>
+      <div class="card mb-4" *ngFor="let posts of data; index as index" >
+        <img
+          class="card-img-top"
+          [src]="posts.image"
+          alt="Card image cap"
+          style="height:315px"
+        />
+        <div class="card-body">
+          <h2 class="card-title">{{posts.title}}</h2>
+          <p class="card-text">
+            {{posts.content}}
+          </p>
+          <a  class="btn btn-primary" (click)="viewPost(index)">View Add &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on {{posts.timestamp.toString().split('T')[0]}} by
+            <a>{{posts.user.username}}</a>
+
+
+        </div>
+
+      </div>
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center mb-4">
+        <li class="page-item">
+          <button class="page-link" [ngClass]="{'page-item disabled': disabled===true}" [disabled]="false"  (click)="previousPost()">&larr; Newer</button>
+        </li>
+        <li class="page-item">
+          <button class="page-link"  [disabled]="disabled" (click)="nextPost()">Older &rarr;</button>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../../../assets/jquery/jquery.min.js"></script>
+<script src="../../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>

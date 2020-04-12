@@ -1,0 +1,134 @@
+
+<body>
+
+<div class="warp">
+  <div class="wrapper wrapper--w780">
+    <div class="card card-3">
+      <div class="card-heading"></div>
+      <div class="card-body">
+        <h2 class="title">Automobile Info</h2>
+        <form method="POST">
+          <div class="input-group">
+            <div class="parentDiv">
+              <div class="leftDiv">
+                <div>
+                  <mat-form-field >
+                    <mat-label>Brand</mat-label>
+                    <mat-select [formControl]="brandControl" (valueChange)="listenBrandChange($event)" required class="rs-select2 js-select-simple select--no-search" style="overflow:hidden;">
+                      <mat-option>--</mat-option>
+                      <mat-option *ngFor="let car of brand" [value]="car" >
+                        {{car}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="brandControl.hasError('required')">Please choose a car brand</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="rightDiv">
+                <div>
+                  <mat-form-field>
+                    <mat-label>Model</mat-label>
+                    <mat-select [formControl]="modelControl" required style="overflow:hidden;">
+                      <mat-option>--</mat-option>
+                      <mat-option *ngFor="let car of model" [value]="car" >
+                        {{car}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="modelControl.hasError('required')">Please choose a car model</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="parentDiv">
+              <div class="leftDiv">
+                <div>
+                  <input  type="text" name="lot" placeholder="Lot no" [formControl]="lotControl">
+                </div>
+              </div>
+              <div class="rightDiv">
+                <div>
+                  <mat-form-field style="margin-top: -30px">
+                    <mat-label>Model Year</mat-label>
+                    <mat-select [formControl]="modelYearControl" required style="overflow:hidden;margin-top:-15px">
+                      <mat-option>--</mat-option>
+                      <mat-option *ngFor="let data of year" [value]="data" >
+                        {{data}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="modelYearControl.hasError('required')">Please choose a year</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="parentDiv">
+              <div class="leftDiv">
+                <mat-form-field>
+                  <mat-label>Transmission</mat-label>
+                  <mat-select [formControl]="transmissionControl" required style="overflow:hidden;margin-top: -30px">
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let data of transmission" [value]="data" >
+                      {{data}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="transmissionControl.hasError('required')">Please choose a transmission type</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="rightDiv">
+                <mat-form-field>
+                  <mat-label>Drivetrain</mat-label>
+                  <mat-select [formControl]="drivetrainControl" required style="overflow:hidden;margin-top: -30px">
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let data of drivetrain" [value]="data" >
+                      {{data}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="drivetrainControl.hasError('required')">Please choose a drivetrain type</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="parentDiv">
+              <div class="leftDiv">
+                <div class="wrap-input100 validate-input" style="width: 50%">
+                  <input class="input100" type="text" name="engineSize" placeholder="Engine Size" [formControl]="engineControl" >
+
+                </div>
+              </div>
+              <div class="rightDiv">
+                <mat-form-field style="overflow:hidden;margin-top:-15px">
+                  <mat-label>Fuel Type</mat-label>
+                  <mat-select [formControl]="fuelControl" required style="overflow:hidden;">
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let data of fuelType" [value]="data" >
+                      {{data}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="fuelControl.hasError('required')">Please choose a fuel type</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="leftDiv">
+              <div class="wrap-input100 validate-input" style="margin-top: -20px;margin-left: 27px" >
+                <input class="input100" type="text" name="kilometer" placeholder="Kilometer" [formControl]="kilometerControl" >
+              </div>
+            </div>
+          </div>
+          <div class="p-t-10">
+            <button mat-raised-button color="primary" style="margin-left: 20px" (click)="onSubmit()">Predict</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+

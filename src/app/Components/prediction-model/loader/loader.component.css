@@ -1,0 +1,26 @@
+body{
+  background-color: inherit;
+  overflow: hidden;
+}
+.blue-snackbar {
+  background: #2196F3;
+}
+.label{
+
+  background-color: #4b4c51;
+  width: 94%;
+  border-radius: 2px;
+  color: white;
+  font-family: "courier new";
+  text-align: center;
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 4px 4px 2px 4px;
+  right:  15px;
+  margin-bottom: 50px;
+  top: 50%;
+  position: absolute;
+}
+.backdropBackground {
+  background-color: red;
+}

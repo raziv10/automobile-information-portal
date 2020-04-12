@@ -1,0 +1,269 @@
+<head>
+  <meta charset="utf-8" />
+  <link href="../../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="body">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  " style="margin-left:62px;margin-top: -55px;">
+  <div class="container">
+    <a class="navbar-brand">Post Information</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<div *ngIf="notification" style="position: fixed">
+  <input type="checkbox" id="one" class="hidden" name="ossm" >
+  <label for="one" class="alert-message">
+    <strong> <i class="fa fa-exclamation-triangle"></i></strong> Please log in if you are the owner of the post
+    <button class="close">×</button>
+  </label>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <p>
+        <img class="img-fluid rounded"
+             style="height:50px"
+             src="../../../assets/images/nav-images/logo2.png" alt="">
+        <a class="mt-4"><span style="font-size: 35px;"> {{data.title}}</span></a>
+      </p>
+      <p class="lead">
+        <img class="img-fluid rounded"
+             style="height:35px"
+             src="../../../assets/images/nav-images/pin.png" alt=""> {{data.location}}</p>
+      <p class="lead">
+        <img class="img-fluid rounded"
+             style="height:35px"
+             src="../../../assets/images/nav-images/account.png" alt="">
+        <a> {{user.username}}</a>
+      </p>
+      <img class="card-img-top"
+           [src]="data.image"
+           alt="Card image cap"
+           style="height:315px">
+      <p>Posted on {{postedDate}}</p>
+      <p>Last active on {{lastActive}}</p>
+      <table *ngIf="isOwner">
+        <td><button type="submit" class="btn btn-warning" (click)="editPost()">Edit</button></td>
+        <td></td>
+        <td><button type="submit" class="btn btn-danger" (click)="deletePost()">Delete</button></td>
+      </table>
+
+
+      <hr>
+
+
+
+      <hr>
+
+      <div class="card my-4">
+        <h5 class="card-header">Post Details</h5>
+        <div class="card-body">
+          <!--          <form>-->
+
+          <div style="float: left;font-size: 20px;font-family: BlinkMacSystemFont">Lot no: <span class="brand-detail">{{data.lot}}</span></div>
+          <div style="float: right;font-size: 20px;font-family: BlinkMacSystemFont">Used for years: <span class="brand-detail">{{data.used_for_time}}</span></div>
+          <div style="margin: 0 auto; width: 200px;font-size: 20px;font-family: BlinkMacSystemFont">Kilometer: <span class="brand-detail">{{data.kilometer}}</span></div>
+          <div style="clear: both;"></div>
+          <div style="float: left;margin-top: 10px;font-size: 20px;font-family: BlinkMacSystemFont">Model Year: <span class="brand-detail">{{data.model_year}}</span></div>
+          <div style="float: right;margin-top: 10px;font-size: 20px;font-family: BlinkMacSystemFontx">Price Negotiable: <span class="brand-detail">{{data.price_negotiable}}</span></div>
+          <div style="margin: 0 auto; width: 200px;margin-top: 10px;font-size: 20px;font-family: BlinkMacSystemFont">Price: <span class="brand-detail">{{data.price}}</span></div>
+          <div style="clear: both;"></div>
+          <div style="float: left;margin-top: 10px;font-size: 20px;font-family: BlinkMacSystemFont">Status: <span class="brand-detail">{{data.status}}</span></div>
+          <div style="margin: 0 auto; width: 200px;margin-top: 10px;font-size: 20px;font-family: BlinkMacSystemFont">Condition: <span class="brand-detail">{{data.condition}}</span></div>
+          <div style="clear: both;"></div>
+          <div class="form-group">
+            <br>
+            <textarea class="form-control" style="background-color: lavender" rows="3" disabled>{{data.content}}</textarea>
+          </div>
+        </div>
+      </div>
+      <!-- Comments Form -->
+      <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+<!--          <form>-->
+            <div class="form-group">
+              <textarea class="form-control" rows="3" [(ngModel)]="commentContent" ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"  (click)="postComment(data.slug)">Submit</button>
+<!--          </form>-->
+        </div>
+      </div>
+
+      <!-- Single Comment -->
+      <ng-container *ngFor="let item of comments; let index=index">
+        <div class="media mb-4" *ngIf="checkComment >0">
+          <img class="d-flex mr-3 rounded-circle" src="../../../assets/images/nav-images/account.png" style="height: 40px" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">Comment posted by: {{item.user.username}}</h5>
+            &#8594; {{item.content}} <button mat-button color="primary" (click)="replyComment(item.id)">reply</button>
+            <div class="form-group" *ngIf="item.id===replyId">
+              <table>
+                <tr>
+                  <td><textarea class="form-control" style="height: 65px;width: 620px;" rows="2"  [(ngModel)]="commentReplyContent" ></textarea>
+                  </td>
+                  <td><img  src="../../../assets/images/send-icon.png" class="image-pointer" (click)="postChildComment(data.slug, item.id)" style="height: 35px;float: right;margin-left: 10px" alt=""></td>
+                </tr>
+              </table>
+          </div>
+            <ng-container *ngFor="let each of item.replies">
+              <div class="childCommentContainer"  *ngIf="item.reply_count >0">
+                <div class="media-body">
+                  <img class="d-flex mr-3 rounded-circle" src="../../../assets/images/nav-images/account.png" style="height: 30px"  alt="">
+
+                  <h5 class="mt-0">Comment replied by: {{each.user.username}}</h5>
+                  &#8594; {{each.content}}
+                  <div class="form-group" *ngIf="each.id===replyId">
+                    <table style="margin-bottom: -25px">
+                      <tr>
+                        <td><textarea class="form-control" class="image-pointer" style="height: 65px;width: 620px;" rows="2"  [(ngModel)]="commentReplyContent" ></textarea>
+                        </td>
+                        <td><img src="../../../assets/images/send-icon.png" class="image-pointer" (click)="postChildComment(data.slug, each.id)" style="height: 35px;float: right;margin-left: 8px;" alt=""></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+
+          </div>
+
+
+        </div>
+      </ng-container>
+
+
+
+    </div>
+
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4"  style="margin-top: 155px">
+
+
+
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">Basic Details</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li class="brand-head">
+                  <a>Brand</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Model</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Transmission</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Drivetrain</a>
+                </li>
+                <li class="brand-head">
+                <br>
+                <a>Engine Size</a>
+              </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Fuel Type</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li style="font-size: 18px;color: lightseagreen">
+                  <a>{{data.brand}}</a>
+                </li>
+                <li class="brand-body">
+                  <br>
+                  <a>{{data.model}}</a>
+                </li>
+                <li class="brand-body">
+                  <br>
+                  <a>{{data.transmission}}</a>
+                </li>
+                <li class="brand-body">
+                  <br>
+                  <a>{{data.drivetrain}}</a>
+                </li>
+                <li class="brand-body">
+                  <br>
+                  <a>{{data.engine_size}}cc</a>
+                </li>
+                <li class="brand-body">
+                  <br>
+                  <a>{{data.fuel_type}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">User Details</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li class="brand-head">
+                  <a >User</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a >Email</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Contact</a>
+                </li>
+                <li class="brand-head">
+                  <br>
+                  <a>Location</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li style="font-size: 18px;color: lightseagreen">
+                  <a>{{user.username}}</a>
+                </li>
+                <li class="brand-body-u">
+                  <a style="font-size: 14px">{{user.email}}</a>
+                </li>
+                <li class="brand-body-u">
+                  <a>{{data.contact}}</a>
+                </li>
+                <li class="brand-body-u">
+                  <a>{{data.location}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+</div>
+</body>

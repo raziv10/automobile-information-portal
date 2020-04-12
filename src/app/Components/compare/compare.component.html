@@ -1,0 +1,230 @@
+
+<!--  &lt;!&ndash; Card deck &ndash;&gt;-->
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="content">
+
+<ng-container *ngIf="loader === true">
+  <div class="sk-chase">
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+  </div>
+</ng-container>
+
+
+<ng-container *ngIf="logoData === false">
+  <h2 class="my-4" style="text-align: center;color: slategray;">No data available</h2>
+</ng-container>
+<div class="container-logo" *ngIf="logoData">
+  <div class="card-logo" *ngFor="let item of logos">
+    <h3 class="title">{{item.brand}}</h3>
+    <div class="bar-logo">
+      <img src="{{item.logo}}" style="height: 120px;margin-top: 5px" (click)="selectedLogo(item)">
+      <div class="filledbar-logo"></div>
+    </div>
+  </div>
+</div>
+<div style="margin-left: 90px;margin-top: 350px" *ngIf="logoData">
+  <div class="row listboxform-wrap d-flex m-0 p-3" [formGroup]="listBoxForm">
+      <div class="primary-container drag-drop-container">
+        <h4 class="text-center vertical-spacing-5 listbox-title" *ngIf="!logoSelected">&#8594; {{availableText}}</h4>
+        <h4 class="text-center vertical-spacing-5 listbox-title" *ngIf="logoSelected">{{availableText}}</h4>
+        <div cdkDropList #availables="cdkDropList"
+             [cdkDropListData] ="availableItems"
+             [cdkDropListConnectedTo] ="[selects,selects2]"
+             (cdkDropListDropped)="drop($event , 'parent')"
+             class="drag-drop-list-parent ">
+          <div nbButton outline status='primary'
+               class="drag-drop-box-parent"
+               *ngFor="let item of availableItems" cdkDrag>
+            {{item.model}}
+            <img *cdkDragPreview [src]="'http://127.0.0.1:8000/images/'+ item.image"
+                 [alt]="'http://127.0.0.1:8000/images/'+ item.image"
+            style="height: 355px;width: 355px">
+          </div>
+        </div>
+      </div>
+    <div class="col-md-6 col-lg-6 col-sm-11 dualListRight">
+      <div class="primary-container drag-drop-container">
+        <h4 class="text-center vertical-spacing-5 listbox-title">Car 1</h4>
+
+        <div cdkDropList #selects2="cdkDropList"
+             [cdkDropListData] ="selectedItems2"
+             [cdkDropListConnectedTo]="[availables]"
+             (cdkDropListDropped)="drop($event,'card1')"
+             class="drag-drop-list">
+          <div nbButton outline status='primary'
+               class="drag-drop-box"
+               *ngFor="let item of selectedItems2 "
+               cdkDrag>
+            {{item.model}}
+            <img *cdkDragPreview [src]="'http://127.0.0.1:8000/images/'+ item.image" [alt]="'http://127.0.0.1:8000/images/'+ item.image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-6 col-sm-11 dualListRight">
+      <div class="primary-container drag-drop-container">
+        <h4 class="text-center vertical-spacing-5 listbox-title">Car 2</h4>
+        <div cdkDropList #selects="cdkDropList"
+             [cdkDropListData] ="selectedItems"
+             [cdkDropListConnectedTo]="[availables]"
+             (cdkDropListDropped)="drop($event,'card2')"
+             class="drag-drop-list">
+          <div nbButton outline status='primary'
+               class="drag-drop-box"
+               *ngFor="let item of selectedItems "
+               cdkDrag>
+            {{item.model}}
+            <img *cdkDragPreview [src]="'http://127.0.0.1:8000/images/'+ item.image" [alt]="'http://127.0.0.1:8000/images/'+ item.image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" *ngIf="data">
+      <div>
+        <img src="../../../assets/images/refresh.png" id="img-refresh"  (click)="reload()">
+      </div>
+      <div class="card-deck row">
+        <div class="col-xs-12 col-sm-8 col-md-6" style="margin-left: -60px" *ngFor="let item of modelDataContainerLeft.results" >
+          <!-- Card -->
+          <div class="card mb-4">
+
+            <!--Card image-->
+            <div class="view overlay">
+              <img class="card-img-top" [src]="'http://127.0.0.1:8000/images/'+ item.image" height="300px" alt="'http://127.0.0.1:8000/images/'+{{item.image}}">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body" style="text-align: left">
+
+              <!--Title-->
+              <h4 class="card-title">Model: {{item.model}}</h4>
+              <!--Text-->
+              <div class="parentDiv">
+                <div class="leftDiv">Transmission: {{item.transmission}}</div>
+                <div class="rightDiv" style="margin-right: 145px">Drivetrain: {{item.divetrain}}</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv">Engine Size: {{item.engineSize}}cc</div>
+                <div class="rightDiv" style="margin-right: 137px">Fuel Type: {{item.fuelType}}</div>
+              </div>
+              <br>
+              <div class="parentDiv">
+                <div class="leftDiv">Tank Capacity: {{item.tankCapacity}}L</div>
+                <div class="rightDiv" style="margin-right: 107px">Seating Capacity: {{item.seatCapacity}}</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv" style="padding-right: 20px">Mileage: {{item.mileage}} kmpl  </div>
+                <div class="rightDiv" style="margin-right: 140px">Power: {{item.power}} bhp</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv">Brake Type: {{item.breakType}}</div>
+                <div class="rightDiv">Gear Capacity: {{item.gearCapacity}}</div>
+
+              </div>
+              <div class="parentDiv">
+                <div style="float: right;margin-right: 90px">
+                Anti Braking System: <span *ngIf="availableLeft">&#10004;</span> <span *ngIf="!availableLeft">&#10060;</span>
+              </div>
+                <div class="leftDiv" >Power Steering: <span *ngIf="availableLeft">&#10004;</span> <span *ngIf="!availableLeft">&#10060;</span>
+                </div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv" style="font-size: 20px;margin-top: 30px" >
+                  Ratings: <span class="fa fa-star checked"  *ngFor="let data of ratingsLeft"></span>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+          <!-- Card -->
+        </div>
+
+
+
+        <div class="col-xs-12 col-sm-9 col-md-6" style="margin-left: 50px" *ngFor="let item of modelDataContainerRight.results" >
+          <!-- Card -->
+          <div class="card mb-4">
+
+            <!--Card image-->
+            <div class="view overlay">
+              <img class="card-img-top" [src]="'http://127.0.0.1:8000/images/'+ item.image" height="300px" alt="'http://127.0.0.1:8000/images/'+{{item.image}}">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body" style="text-align: left">
+
+              <!--Title-->
+              <h4 class="card-title">Model: {{item.model}}</h4>
+              <!--Text-->
+              <div class="parentDiv">
+                <div class="leftDiv">Transmission: {{item.transmission}}</div>
+                <div class="rightDiv" style="margin-right: 145px">Drivetrain: {{item.divetrain}}</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv">Engine Size: {{item.engineSize}}cc</div>
+                <div class="rightDiv" style="margin-right: 137px">Fuel Type: {{item.fuelType}}</div>
+              </div>
+              <br>
+              <div class="parentDiv">
+                <div class="leftDiv">Tank Capacity: {{item.tankCapacity}}L</div>
+                <div class="rightDiv" style="margin-right: 107px">Seating Capacity: {{item.seatCapacity}}</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv" style="padding-right: 20px">Mileage: {{item.mileage}} kmpl  </div>
+                <div class="rightDiv" style="margin-right: 140px">Power: {{item.power}} bhp</div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv">Brake Type: {{item.breakType}}</div>
+                <div class="rightDiv">Gear Capacity: {{item.gearCapacity}}</div>
+
+              </div>
+              <div class="parentDiv">
+                <div style="float: right;margin-right: 90px">
+                  Anti Braking System: <span *ngIf="availableRight">&#10004;</span> <span *ngIf="!availableRight">&#10060;</span>
+                </div>
+                <div class="leftDiv" >Power Steering: <span *ngIf="availableRight">&#10004;</span> <span *ngIf="!availableRight">&#10060;</span>
+                </div>
+              </div>
+              <div class="parentDiv">
+                <div class="leftDiv" style="font-size: 20px;margin-top: 30px" >
+                  Ratings: <span class="fa fa-star checked"  *ngFor="let data of ratingsRight"></span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- Card -->
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</body>
+
+
+
+
+
+
+
+
