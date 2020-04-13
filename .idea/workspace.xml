@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +143,7 @@
       <workItem from="1586630917555" duration="2547000" />
       <workItem from="1586677069491" duration="14171000" />
       <workItem from="1586762823069" duration="9560000" />
-      <workItem from="1586772866013" duration="5013000" />
+      <workItem from="1586772866013" duration="5645000" />
     </task>
     <task id="LOCAL-00001" summary="Project Completed-working on comments CRUD">
       <created>1586685601663</created>
