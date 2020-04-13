@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="" />
+    <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +141,7 @@
       <workItem from="1586414055649" duration="1183000" />
       <workItem from="1586630917555" duration="2547000" />
       <workItem from="1586677069491" duration="14171000" />
-      <workItem from="1586762823069" duration="8234000" />
+      <workItem from="1586762823069" duration="8462000" />
     </task>
     <task id="LOCAL-00001" summary="Project Completed-working on comments CRUD">
       <created>1586685601663</created>
