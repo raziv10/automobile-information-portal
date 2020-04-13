@@ -53,12 +53,11 @@ export class PostDetailComponent implements OnInit {
           this.data = response;
           this.user = response.user;
           this.comments = response.comments;
+
           // console.log(this.data);
           console.log(response.slug);
           this.slug = response.slug;
           this.checkComment = response.comments.length;
-          console.log(this.comments);
-          console.log(this.childComments);
           this.getPostTime(response.publish_date);
           this.getPostTime(response.user.last_login);
           this.findCommentReplies();
@@ -69,7 +68,6 @@ export class PostDetailComponent implements OnInit {
     }
     console.log(localStorage.getItem('post-detail'));
   }
-
   findCommentReplies() {
     this.comments.map((item) => {
       if (item.reply_count > 0) {

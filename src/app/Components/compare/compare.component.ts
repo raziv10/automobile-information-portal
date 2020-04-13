@@ -34,7 +34,7 @@ export class CompareComponent implements OnInit {
   counterLeft = 0;
   counterRight = 0;
   loader: boolean;
-  private logoData: boolean;
+  logoData: boolean;
   ngOnInit() {
 
     this.getBrandLogo();

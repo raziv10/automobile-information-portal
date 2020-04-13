@@ -1,0 +1,369 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200329.140528.5244.0.001.json",
+    "dumpEventTime": "2020-03-29T14:05:29Z",
+    "dumpEventTimeStamp": "1585470029176",
+    "processId": 5244,
+    "cwd": "C:\\Users\\acer\\automobile-information-portal",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2019.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\js-language-service.js",
+      "-id=1585468396083",
+      "-debug-name=typescript"
+    ],
+    "nodejsVersion": "v12.9.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.9.0",
+      "v8": "7.6.303.29-node.15",
+      "uv": "1.31.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "4",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.9.0/node-v12.9.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.9.0/node-v12.9.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.9.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2712,
+        "user": 10259515,
+        "nice": 0,
+        "sys": 19560734,
+        "idle": 55145750,
+        "irq": 14570609
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2712,
+        "user": 13717875,
+        "nice": 0,
+        "sys": 6231671,
+        "idle": 65016234,
+        "irq": 481937
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2712,
+        "user": 14782890,
+        "nice": 0,
+        "sys": 6693953,
+        "idle": 63488937,
+        "irq": 76546
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz",
+        "speed": 2712,
+        "user": 15014921,
+        "nice": 0,
+        "sys": 6133078,
+        "idle": 63817781,
+        "irq": 47109
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "5a:00:ae:a3:58:72",
+        "address": "fe80::adb9:fb03:9560:e115",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 18
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "5a:00:ae:a3:58:72",
+        "address": "192.168.10.4",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "DESKTOP-J145SAG"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff63b5c6ed9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10873"
+    },
+    {
+      "pc": "0x00007ff63b5cb26c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28172"
+    },
+    {
+      "pc": "0x00007ff63b5ca218",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23992"
+    },
+    {
+      "pc": "0x00007ff63b6b5e5b",
+      "symbol": "v8::base::CPU::has_sse+37691"
+    },
+    {
+      "pc": "0x00007ff63bea899e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff63be90941",
+      "symbol": "v8::SharedArrayBuffer::Externalize+833"
+    },
+    {
+      "pc": "0x00007ff63bd5ec7c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff63bd66831",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3761"
+    },
+    {
+      "pc": "0x00007ff63bd5c253",
+      "symbol": "v8::internal::Heap::CollectGarbage+1235"
+    },
+    {
+      "pc": "0x00007ff63bd5aaf4",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2356"
+    },
+    {
+      "pc": "0x00007ff63bd7a305",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff63bae8f9d",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+3981"
+    },
+    {
+      "pc": "0x00007ff63c2c223d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+575565"
+    },
+    {
+      "pc": "0x00007ff63c2c3173",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+579459"
+    },
+    {
+      "pc": "0x0000038f00c48bb7",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 156291072,
+    "totalCommittedMemory": 156291072,
+    "usedMemory": 149584944,
+    "availableMemory": 2049685792,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261832,
+        "used": 31432,
+        "available": 230400
+      },
+      "new_space": {
+        "memorySize": 1835008,
+        "committedMemory": 1835008,
+        "capacity": 1832824,
+        "used": 1832824,
+        "available": 0
+      },
+      "old_space": {
+        "memorySize": 129347584,
+        "committedMemory": 129347584,
+        "capacity": 129180568,
+        "used": 123939464,
+        "available": 5241104
+      },
+      "code_space": {
+        "memorySize": 2260992,
+        "committedMemory": 2260992,
+        "capacity": 2149792,
+        "used": 1682144,
+        "available": 467648
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 1052672,
+        "capacity": 1051032,
+        "used": 661440,
+        "available": 389592
+      },
+      "large_object_space": {
+        "memorySize": 21483520,
+        "committedMemory": 21483520,
+        "capacity": 21434184,
+        "used": 21434184,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3456,
+        "used": 3456,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1832824,
+        "used": 0,
+        "available": 1832824
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 39.921,
+    "kernelCpuSeconds": 7.14,
+    "cpuConsumptionPercent": 2.85564,
+    "maxRss": 693542912,
+    "pageFaults": {
+      "IORequired": 638788,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 4782,
+      "writes": 1011
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "": "::=::\\",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "ANDROID_HOME": "C:\\Users\\acer\\AppData\\Local\\Android\\Sdk",
+    "APPDATA": "C:\\Users\\acer\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132112866387884726",
+    "CLASSPATH": ".;",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-J145SAG",
+    "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\acer",
+    "IDEA_INITIAL_DIRECTORY": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2019.2.1\\bin",
+    "JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_221",
+    "LOCALAPPDATA": "C:\\Users\\acer\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-J145SAG",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\acer\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jre1.8.0_181\\bin;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\xampp\\php;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Java\\jdk1.8.0_221\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Users\\acer\\AppData\\Local\\Programs\\Python\\Python37\\Scripts;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Users\\acer\\AppData\\Local\\Programs\\Python\\Python37;C:\\Users\\acer\\AppData\\Roaming\\npm;C:\\Users\\acer\\AppData\\Local\\Programs\\Python\\Python37",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "8e09",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\acer\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\acer\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-J145SAG",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-J145SAG",
+    "USERNAME": "acer",
+    "USERPROFILE": "C:\\Users\\acer",
+    "windir": "C:\\WINDOWS"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\Program Files\\AVAST Software\\Avast\\aswhook.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll"
+  ]
+}

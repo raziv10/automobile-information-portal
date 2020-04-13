@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/compare/compare.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/compare/compare.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/login/login.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/navigation/navigation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/navigation/navigation.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/register/register.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ZYtASGNERz4n0fT17hkjv6HkQv" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Final Year Project\Active_FYP\automobile-information-portal\node_modules\typescript\lib" />
+    <property name="ts.rename.search.for.dynamic.occurrences" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets\images" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets\images\blog-post" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets\bootstrap\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\automobile-information-portal" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets\images" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\assets\jquery" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\app\Components\post-landing\assets\images" />
+      <recent name="C:\Users\acer\automobile-information-portal\src\app\Authentication" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="E2E Tests (automobile-information-portal)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="" />
+      <created>1585027712065</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585027712065</updated>
+      <workItem from="1585027715528" duration="1298000" />
+      <workItem from="1585032056778" duration="50000" />
+      <workItem from="1585059949440" duration="27957000" />
+      <workItem from="1585139697111" duration="21684000" />
+      <workItem from="1585208817815" duration="18967000" />
+      <workItem from="1585284051338" duration="2063000" />
+      <workItem from="1585300773745" duration="20000" />
+      <workItem from="1585307649626" duration="9416000" />
+      <workItem from="1585376746243" duration="12153000" />
+      <workItem from="1585394818287" duration="18386000" />
+      <workItem from="1585466217965" duration="1869000" />
+      <workItem from="1585468336280" duration="1485000" />
+      <workItem from="1585472848230" duration="2419000" />
+      <workItem from="1585477338434" duration="1545000" />
+      <workItem from="1585480768189" duration="16296000" />
+      <workItem from="1585543447617" duration="7359000" />
+      <workItem from="1585565155377" duration="8417000" />
+      <workItem from="1585576021297" duration="13151000" />
+      <workItem from="1585636027033" duration="9000" />
+      <workItem from="1585649494897" duration="17705000" />
+      <workItem from="1585725442656" duration="10375000" />
+      <workItem from="1585808551317" duration="30531000" />
+      <workItem from="1585900573547" duration="33276000" />
+      <workItem from="1585978994056" duration="3201000" />
+      <workItem from="1586063619560" duration="34649000" />
+      <workItem from="1586153303244" duration="7490000" />
+      <workItem from="1586163777825" duration="1072000" />
+      <workItem from="1586165049036" duration="473000" />
+      <workItem from="1586167333118" duration="1667000" />
+      <workItem from="1586169961334" duration="1074000" />
+      <workItem from="1586171561923" duration="3286000" />
+      <workItem from="1586181112255" duration="10151000" />
+      <workItem from="1586240009806" duration="33666000" />
+      <workItem from="1586326354930" duration="27350000" />
+      <workItem from="1586414055649" duration="1183000" />
+      <workItem from="1586630917555" duration="2547000" />
+      <workItem from="1586677069491" duration="14171000" />
+      <workItem from="1586762823069" duration="7975000" />
+    </task>
+    <task id="LOCAL-00001" summary="Project Completed-working on comments CRUD">
+      <created>1586685601663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586685601663</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Project Completed-working on comments CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project Completed-working on comments CRUD" />
+  </component>
+</project>

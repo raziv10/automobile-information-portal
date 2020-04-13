@@ -1,0 +1,80 @@
+<head>
+  <meta charset="utf-8" />
+  <link href="../../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  " style="margin-left:62px;margin-top: 1px;">
+  <div class="container">
+    <a class="navbar-brand">Nearby Automobile Hubs</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<div>
+
+
+
+<div   class="parentDiv">
+  <div class="leftDiv">
+    <img src="../../../assets/images/search.svg" id="search-img">
+  </div>
+  <div class="rightDiv">
+
+    <div class="active-cyan-4 mb-3" >
+
+
+      <input class="form-control"
+             [(ngModel)] ="searchTerm"
+             type="text"
+             placeholder="Search by location"
+             aria-label="Search by location">
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="blog-slider" *ngFor="let item of data | locationFilter:searchTerm">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img
+          [src]='item.image'
+          alt=""
+          height="200px"
+        />
+      </div>
+      <div class="text-container">
+        <h3 id="heading">{{item.company}}</h3>
+        <hr>
+        <p class="font-style">Email: {{item.email}}</p>
+        <p class="font-style">Contact: {{item.contact}}</p>
+        <p class="font-style">Open Time: {{item.timing}}</p>
+        <p class="font-style">Location: {{item.location}}, {{item.district}} {{item.zipCode}}<img src="../../../assets/images/map.svg"
+                                                                                                  id="map-img" class="hvr-grow-shadow"
+                                                                                                  (click)="openMapDialog(item.latitude, item.longitude, item.company)"></p>
+
+        <p class="font-style">Ratings:</p>
+          <div class="ratings"><ngx-stars [readonly]="true" [maxStars]="5" [initialStars]=item.ratings></ngx-stars></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
