@@ -3,7 +3,7 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {PostService} from '../post-service/post.service';
 import {MatDialogRef} from '@angular/material';
 import {ApiConst} from '../../../ApiConstants/api-const';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 import {toInteger} from '@ng-bootstrap/ng-bootstrap/util/util';
 
 @Component({
@@ -154,22 +154,22 @@ export class EditPostComponent implements OnInit {
       this.postService.editBlogContent(formData, this.slug, headers)
         .subscribe((response)=>{
           console.log(response);
-          swal("Sucess!", 'Successfully Updated' , "success");
+          swal.fire("Sucess!", 'Successfully Updated' , "success");
           setTimeout(()=>{
             window.location.reload();
           },1000);
         },error => {
         if (error.error.detail === signatureExp) {
-          swal('Login!', 'Signature has expired. Please log in again', 'warning');
+          swal.fire('Login!', 'Signature has expired. Please log in again', 'warning');
         } else {
           console.log(error);
-          swal('Server Error!', 'Cannot Update', 'warning');
+          swal.fire('Server Error!', 'Cannot Update', 'warning');
         }
       });
 
     }else{
       console.log('Not Valid');
-      swal("Empty Fields!", 'Fields cannot be empty', "error");
+      swal.fire("Empty Fields!", 'Fields cannot be empty', "error");
     }
   }
 

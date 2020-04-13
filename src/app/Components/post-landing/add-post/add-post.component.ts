@@ -4,7 +4,7 @@ import {PostService} from '../post-service/post.service';
 import {ApiConst} from '../../../ApiConstants/api-const';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {MatDialogRef} from '@angular/material';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-post',
@@ -116,13 +116,13 @@ export class AddPostComponent implements OnInit {
       };
       this.postService.postBlogContent(formData, ApiConst.BLOGPOSTCREATE, headers).subscribe((response)=>{
         console.log(response);
-        swal("Sucess!", 'Post sucessfull' , "success");
+        swal.fire("Sucess!", 'Post sucessfull' , "success");
         this.dialog.close({data: 'Sucess'});
       });
 
     }else{
       console.log('Not Valid');
-      swal("Empty Fields!", 'Fields cannot be empty', "error");
+      swal.fire("Empty Fields!", 'Fields cannot be empty', "error");
     }
   }
 

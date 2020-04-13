@@ -6,7 +6,7 @@ import {HttpParams} from '@angular/common/http';
 import {LoginService} from './login-service/login.service';
 import {ApiConst} from '../../ApiConstants/api-const';
 import {AuthService} from '../_common-services/auth-service/auth.service';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 
 
 @Component({
@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
                     if(response){
                       this.authService.setToken(response.token);
                       data.token = response.token;
-                      swal("Sucess!", 'Login sucessfull' , "success");
+                      swal.fire("Sucess!", 'Login sucessfull' , "success");
                       setTimeout(()=>{
                         window.location.reload();
 
@@ -83,17 +83,17 @@ export class LoginComponent implements OnInit {
           }, error => {
             console.log(error);
             if (error.error.non_field_errors) {
-              swal("Error!", error.error.non_field_errors[0] , "error");
+              swal.fire("Error!", error.error.non_field_errors[0] , "error");
               console.log(error.error.non_field_errors[0]);
             } else {
               console.log(error);
-              swal("Error!", 'Invalid Email', "error");
+              swal.fire("Error!", 'Invalid Email', "error");
               console.log(error.error.email);
             }
           }
         );
     }else{
-      swal("Empty Fields!", 'Fields cannot be empty', "error");
+      swal.fire("Empty Fields!", 'Fields cannot be empty', "error");
     }
 
     console.log(this.userForm.getRawValue());

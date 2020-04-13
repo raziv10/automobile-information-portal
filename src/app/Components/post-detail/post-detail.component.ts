@@ -3,7 +3,7 @@ import {PostService} from '../post-landing/post-service/post.service';
 import {Router} from '@angular/router';
 import {ApiConst} from '../../ApiConstants/api-const';
 import {HttpParams} from '@angular/common/http';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 import {toInteger} from '@ng-bootstrap/ng-bootstrap/util/util';
 import {AddPostComponent} from '../post-landing/add-post/add-post.component';
 import {MatDialog} from '@angular/material';
@@ -110,14 +110,14 @@ export class PostDetailComponent implements OnInit {
           window.location.reload();
         }, error => {
           if (error.error.detail === signatureExp) {
-            swal('Login!', 'Signature has expired. Please log in again', 'warning');
+            swal.fire('Login!', 'Signature has expired. Please log in again', 'warning');
           } else {
             console.log(error);
-            swal('Login!', 'You must login to comment!', 'warning');
+            swal.fire('Login!', 'You must login to comment!', 'warning');
           }
         });
     } else {
-      swal('Comment', 'Please include a comment', 'info');
+      swal.fire('Comment', 'Please include a comment', 'info');
     }
 
   }
@@ -149,14 +149,14 @@ export class PostDetailComponent implements OnInit {
           window.location.reload();
         }, error => {
           if (error.error.detail === signatureExp) {
-            swal('Login!', 'Signature has expired. Please log in again', 'warning');
+            swal.fire('Login!', 'Signature has expired. Please log in again', 'warning');
           } else {
             console.log(error);
-            swal('Login!', 'You must login to comment!', 'warning');
+            swal.fire('Login!', 'You must login to comment!', 'warning');
           }
         });
     } else {
-      swal('Comment', 'Please include a comment', 'info');
+      swal.fire('Comment', 'Please include a comment', 'info');
     }
   }
 
@@ -210,12 +210,11 @@ export class PostDetailComponent implements OnInit {
     };
     const lookup = 'Authentication credentials were not provided.';
     const signatureExp = 'Signature has expired.';
-    swal({
+    swal.fire({
       title: 'Are you sure?',
       text: 'Once deleted, you will not be able to recover this post!',
       icon: 'warning',
-      buttons: ['Cancel', true],
-      dangerMode: true,
+      showCancelButton: true,
     }).then((willDelete) => {
       if (willDelete) {
         this.postService.deleteBlogPost(this.slug, headers)
@@ -223,10 +222,10 @@ export class PostDetailComponent implements OnInit {
             this.route.navigate(['dashboard']);
           }, error => {
             if (error.error.detail === signatureExp) {
-              swal('Login!', 'Signature has expired. Please log in again', 'warning');
+              swal.fire('Login!', 'Signature has expired. Please log in again', 'warning');
             } else {
               console.log(error);
-              swal('Login!', 'You must login to delete!', 'warning');
+              swal.fire('Login!', 'You must login to delete!', 'warning');
             }
           });
       }

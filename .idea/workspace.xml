@@ -3,6 +3,77 @@
   <component name="ChangeListManager">
     <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/css/loader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/app-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/blog-post/ecosport.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/car-hd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/map.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/account.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/app-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/compare.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/dashboard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/logo2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/pin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/predict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/nav-images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/pin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/send-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/svg-meter-gauge-needle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/images/upload-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/loader-script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/perfect-scrollbar.jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/assets/jquery/sidebarmenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/car-hd.950797aded917046c762.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/main-es2015.1dfc6cb03214b5cec533.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/polyfills-es2015.394d1268d76e7e075598.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/runtime-es2015.7bce183f1ed5ae5f2249.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/runtime-es5.7bce183f1ed5ae5f2249.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/scripts.29c34ec5d5c868564e08.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/automobile-information-portal/styles.9923692013eeef23b9b3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/post-landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/post-landing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/prediction-model/prediction-model.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/prediction-model/prediction-model.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Components/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/register/register.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +212,7 @@
       <workItem from="1586630917555" duration="2547000" />
       <workItem from="1586677069491" duration="14171000" />
       <workItem from="1586762823069" duration="9560000" />
-      <workItem from="1586772866013" duration="605000" />
+      <workItem from="1586772866013" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="Project Completed-working on comments CRUD">
       <created>1586685601663</created>

@@ -3,7 +3,7 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {PostService} from '../post-landing/post-service/post.service';
 import {MatDialog, MatDialogRef} from '@angular/material';
 import {ApiConst} from '../../ApiConstants/api-const';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 import * as $ from 'jquery';
 import {AddPostComponent} from '../post-landing/add-post/add-post.component';
 import {LoaderComponent} from './loader/loader.component';
@@ -94,14 +94,14 @@ export class PredictionModelComponent implements OnInit {
           this.baseService.hitPredictionModelApi(formData, ApiConst.PREDICTION)
             .subscribe((data)=>{
               console.log(data);
-              swal("Sucess!", data , "success");
+              swal.fire("Sucess!", data , "success");
             });
         }
       });
 
 
     }else{
-      swal("Empty Fields!", 'Fields cannot be empty', "error");
+      swal.fire("Empty Fields!", 'Fields cannot be empty', "error");
     }
   }
 

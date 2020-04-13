@@ -8,7 +8,7 @@ import {AuthService} from '../_common-services/auth-service/auth.service';
 import {RegisterService} from './register-service/register.service';
 import {HttpParams} from '@angular/common/http';
 import {ApiConst} from '../../ApiConstants/api-const';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -56,26 +56,26 @@ export class RegisterComponent implements OnInit {
             console.log(data.token);
             if (data) {
               console.log(data);
-              swal("Sucess!", 'Register sucessfull' , "success");
+              swal.fire("Sucess!", 'Register sucessfull' , "success");
             }
           }, error => {
             console.log(error);
             if (error.error.username !== undefined ) {
-              swal("Username!", error.error.username[0], "error");
+              swal.fire("Username!", error.error.username[0], "error");
               console.log(error.error.username);
 
             } else if(error.error.password !== undefined){
               console.log(error.error.password);
-              swal("Password!", error.error.password[0], "error");
+              swal.fire("Password!", error.error.password[0], "error");
             }
             else if(error.error.email !== undefined) {
-                swal("Email!", error.error.email[0], "error");
+                swal.fire("Email!", error.error.email[0], "error");
               }
           }
         );
       console.log(this.userForm.getRawValue());
     }else{
-      swal("Empty Fields!", 'Fields cannot be empty', "error");
+      swal.fire("Empty Fields!", 'Fields cannot be empty', "error");
     }
 
   }

@@ -5,7 +5,7 @@ import {BaseService} from '../_common-services/base-service/base.service';
 import {MatDialog} from '@angular/material';
 import {AddPostComponent} from './add-post/add-post.component';
 import {Router} from '@angular/router';
-import swal from 'sweetalert';
+import swal from 'sweetalert2';
 
 
 
@@ -70,7 +70,7 @@ export class PostLandingComponent implements OnInit {
       .subscribe((response) =>{},error => {
         console.log(error.error.detail);
         if(error.error.detail === signatureExp || error.error.detail === nextLookUp ){
-          swal("Login!", "Signature has expired. Please log in again", "warning");
+          swal.fire("Login!", "Signature has expired. Please log in again", "warning");
         }else{
           if(error.error.detail !== lookup ){
             this.dialog.open(AddPostComponent,{
@@ -83,7 +83,7 @@ export class PostLandingComponent implements OnInit {
               }
             });
           } else{
-            swal("Login!", "You must be logged in to Post!", "warning");
+            swal.fire("Login!", "You must be logged in to Post!", "warning");
           }
         }
 
@@ -137,7 +137,7 @@ export class PostLandingComponent implements OnInit {
   }
 
   logout() {
-    swal("Logout Successful", "", "success");
+    swal.fire("Logout Successful", "", "success");
     localStorage.removeItem('current-active-user');
     localStorage.removeItem('current-active-user-id');
     localStorage.removeItem('token');
