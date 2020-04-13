@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/compare/compare.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/compare/compare.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/navigation/navigation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/navigation/navigation.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-detail/post-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/add-post/add-post.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/post-landing/edit-post/edit-post.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Components/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Components/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
-    </list>
+    <list default="true" id="11967dc9-10e5-4381-93db-e69b9487eb1d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +138,7 @@
       <workItem from="1586414055649" duration="1183000" />
       <workItem from="1586630917555" duration="2547000" />
       <workItem from="1586677069491" duration="14171000" />
-      <workItem from="1586762823069" duration="7975000" />
+      <workItem from="1586762823069" duration="8234000" />
     </task>
     <task id="LOCAL-00001" summary="Project Completed-working on comments CRUD">
       <created>1586685601663</created>
